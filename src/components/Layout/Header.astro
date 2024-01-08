@@ -1,5 +1,5 @@
 ---
-// Importa el componente HamburgerMenu
+import './header.css';
 ---
 <header class=" px-4 max-w-5xl container mx-auto mt-8">
     
@@ -16,7 +16,8 @@
             <span></span>
         </nav>
 
-        <label class="hamburger sm:hidden cursor-pointer" for="menuToggle">
+        <!-- Navbar Menú Hamburguer -->
+        <label class="hamburger sm:hidden cursor-pointer p-1 rounded-lg bg-white/5" for="menuToggle">
             <input type="checkbox" id="menuToggle" class="hidden lg:hidden">
             <svg viewBox="0 0 32 32">
                 <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
@@ -24,96 +25,30 @@
             </svg>
         </label>
     </div>
-    
+    <div id="menu" class=" my-2" >
+        <ul class="list-none flex flex-col items-center bg-white/5 rounded-md ">
+            <li class=" font-medium text-xl py-2"><a href="#Inicio">Inicio</a></li>
+            <li class=" font-medium text-xl py-2"><a href="#Proyectos">Proyectos</a></li>
+            <li class=" font-medium text-xl py-2"><a href="#Experiencia">Experiencia</a></li>
+        </ul>
+    </div>
 </header>
 
-
-<style>
-    /* Oculta el menú por defecto */
-    #menu {
-        display: none;
-    }
-
-    /* Muestra el menú cuando tiene la clase 'open' */
-    #menu.open {
-        display: block;
-    }
-nav {
-    position: relative;
-}
-
-nav span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80px;
-    height: 100%;
-    background-color: #504d6aa4;
-    border-radius: 8px;
-    transition: .5s;
-    opacity: 0;
-}
-
-nav a {
-    position: relative;
-    z-index: 1;
-}
-
-nav a:hover ~ span {
-    opacity: 1;
-}
-
-nav a:nth-child(1):hover ~ span {
-    left: 0px;
-    width: 81px;
-}
-
-nav a:nth-child(2):hover ~ span {
-    left: 85px;
-    width: 125px;
-}
-
-nav a:nth-child(3):hover ~ span {
-    left: 215px;
-    width: 135px;
-}
-
-.hamburger {
-    cursor: pointer;
-}
-
-.hamburger input {
-    display: none;
-}
-
-.hamburger svg {
-    /* The size of the SVG defines the overall size */
-    height: 2em;
-    /* Define the transition for transforming the SVG */
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line {
-    fill: none;
-    stroke: white;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3;
-    /* Define the transition for transforming the Stroke */
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line-top-bottom {
-    stroke-dasharray: 12 63;
-}
-
-.hamburger input:checked + svg {
-    transform: rotate(-45deg);
-}
-
-.hamburger input:checked + svg .line-top-bottom {
-    stroke-dasharray: 20 300;
-    stroke-dashoffset: -32.42;
-}
-</style>
+<script type="module">
+    const btn = document.querySelector('#menuToggle');
+    const menu = document.querySelector('#menu');
+        menu.style.display = 'none';
+    
+        btn.addEventListener('click', () => {
+        if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+        } else {
+        menu.style.display = 'none';
+        }
+    });
+        window.addEventListener('resize', () => {
+        if (window.innerWidth > 640) {
+        menu.style.display = 'none';
+        }
+    });
+</script>
