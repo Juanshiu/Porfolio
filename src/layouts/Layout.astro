@@ -22,10 +22,10 @@ import Footer from "../components/Layout/Footer.astro";
 	</head>
 
 	<body class=" relative">
-		<div class="absolute top-0 bottom-0 z-[-2] h-max w-full bg-neutral-950 bg-[radial-gradient(ellipse_60%_100%_at_50%_0%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+		<div class="absolute top-0 bottom-0 z-[-2] h-max w-auto sm:w-full bg-neutral-950 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
 
 		<Header/>
-		<main class=" max-w-5xl mx-auto container">
+		<main class=" max-w-4xl mx-auto ">
 
 			<slot />
 
@@ -46,7 +46,7 @@ import Footer from "../components/Layout/Footer.astro";
 	}
 
 	body {
-		background: #050505;
+		background: #0A0A0A;
 		display: flex;
 		flex-direction: column;
 	}

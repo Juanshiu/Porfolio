@@ -3,20 +3,36 @@ import Layout from '../layouts/Layout.astro';
 import Presentacion from '../components/Layout/Presentacion.astro'
 import '@fontsource-variable/onest';
 import SectionContainer from "../components/SectionContainer.astro"
-import Projects from "../components/Layout/Projects.astro"
+import Projects from "../components/Projects.astro"
+import Experience from "../components/Layout/Experience.astro";
 import 'animate.css';
+import Timeline from "../components/Timeline.astro";
 ---
 
 <Layout 
 title="Portafolio de Juan Diego" 
-description='¿Quieres crear un sitio web interactivo, creativo y escalable? Estás en el lugar correcto.'>
+description='¿Quieres crear un sitio web interactivo, creativo y escalable? Estás en el lugar correcto.'
+>
 
-	<SectionContainer id="Inicio" class="animate__animated animate__fadeInUp flex flex-col-reverse lg:flex-row lg:gap-6 mt-8">
+	<SectionContainer id="Inicio" class="animate__animated animate__fadeInUp mt-8">
 		<Presentacion/>
 	</SectionContainer>
 
-	<SectionContainer id="Proyectos" class=" my-16 p-4 animate__animated animate__fadeInUp">
+	<SectionContainer id=" Experiencia" class=" mt-16 p-4">
+		<h2 class=" text-3xl font-semibold mb-6 flex gap-x-3 items-center"><img src="briefcase.svg" alt=""> Experiencia</h2>
 
+		<article>
+			<Timeline>
+				<Experience
+				title='Desarrollador Web - Freelance'
+				date='2023 - Actualidad'
+				description='Desarrollo de sitios web con Astro, Tailwind CSS y Javascript.'
+				/>
+			</Timeline>
+		</article>
+	</SectionContainer>
+
+	<SectionContainer id="Proyectos" class=" mt-10 p-4">
 		<h2 class=" text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 			<img src="code.svg" alt="">Proyectos
 		</h2>
@@ -38,6 +54,7 @@ description='¿Quieres crear un sitio web interactivo, creativo y escalable? Est
 			/>
 		</article>
 	</SectionContainer>
+
 </Layout>
 
 <style>

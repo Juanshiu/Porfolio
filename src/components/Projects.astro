@@ -29,7 +29,7 @@ const Tags = {
 ---
 
 <div class="w-full lg:w-1/2 h-min p-8 bg-white/5 rounded-xl ">
-    <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+    <h3 class="text-2xl font-semibold text-[#E899DC]">{title}</h3>
     <p class="text-lg mb-4 text-pretty">{description}</p>
         <ul class="flex gap-x-2 flex-row mb-2">
             {Object.values(Tags).filter(tag => tagsToShow.includes(tag.name)).map((tag) => (
