@@ -1,4 +1,4 @@
-![Texto alternativo](https://drive.google.com/uc?export=view&id=1tOWLgO6tlE10GVaBCb02tqfks4aH_xTG)
+![Texto alternativo](https://i.imgur.com/CWI40xe.png)
 
 
 ## 🛠️ Stack
