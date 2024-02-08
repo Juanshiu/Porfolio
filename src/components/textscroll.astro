@@ -1,0 +1,93 @@
+<div class="slider py-2">
+    <div class="slide-track ml-16">
+        <div class="slide flex gap-1">
+            <img src="html5.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="css.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="javascript.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="tailwind.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="astro.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="mysql.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="php.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="strapi.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="supabase.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="illustrator.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="photoshop.svg" alt="logo" class=" w-10">
+        </div>
+        <div class="slide flex gap-1">
+            <img src="figma.svg" alt="logo" class=" w-10">
+        </div>
+    </div>
+</div>
+
+<style>
+.slider {
+    color: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    -webkit-animation: scroll 30s linear infinite;
+    width: calc(200px * 8);
+}
+
+.slider .slide {
+    width: 150px;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 5));
+        transform: translateX(calc(-200px * 5));
+    }
+}
+
+@media (width < 768px) {
+
+    .slider {
+    width: 24rem;
+}
+    .slider .slide-track {
+        width: 900px;
+    }
+}
+
+</style>

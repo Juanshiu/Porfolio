@@ -2,11 +2,11 @@
 import ButtonStyle from "../ButtonStyle.astro";
 ---
 
-<article class=" w-full p-4">
+<article class=" w-full">
 
     <img src="images/Head.webp" class=" size-20 rounded-full" alt="">
 
-    <h1 class=" font-bold text-6xl mt-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-rose-500">¡Hola! Soy Juan Diego, Desarrollador Frontend.</h1>
+    <h1 class="animate-charcter font-bold text-6xl mt-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-rose-500">¡Hola! Soy Juan Diego, Desarrollador Frontend.</h1>
     
     <div class=" dark:text-white my-12 font-medium">
         <p class=" mb-4 text-2xl sm:text-pretty ">Con un año de experiencia, <span class=" text-yellow-200"> Desarrollador Frontend y Diseñador UI/UX.</span> <span class=" text-red-200"> De Neiva, Colombia. </span> Me apasiona crear experiencias digitales <span class=" text-sky-200"> intuitivas y atractivas </span> visualmente utilizando las <span class=" text-pink-200"> últimas tecnologías </span> para el desarrollo web.</p>
@@ -24,3 +24,27 @@ import ButtonStyle from "../ButtonStyle.astro";
         <img src="linkedin.svg" alt=""> Linkedin</ButtonStyle>
     </div>
 </article>
+
+<style>
+    .animate-charcter {
+        background-image: linear-gradient(
+            -25deg,
+            #00d9ff 0%,
+            #7c0c9e 29%,
+            #fb6698 67%,
+            #00d9ff 100%
+    );
+        background-size: 200% auto;
+        color: #fff;
+        text-decoration: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 5s ease-in infinite;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+</style>

@@ -3,10 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Presentacion from '../components/Layout/Presentacion.astro'
 import '@fontsource-variable/onest';
 import SectionContainer from "../components/SectionContainer.astro"
-import Projects from "../components/Projects.astro"
+import Projects from "../components/Layout/Projects.astro"
 import Experience from "../components/Layout/Experience.astro";
-import 'animate.css';
 import Timeline from "../components/Timeline.astro";
+import Textscroll from "../components/Textscroll.astro";
+import Titulo from "../components/Titulo.astro";
 ---
 
 <Layout 
@@ -14,12 +15,12 @@ title="Portafolio de Juan Diego"
 description='¿Quieres crear un sitio web interactivo, creativo y escalable? Estás en el lugar correcto.'
 >
 
-	<SectionContainer id="Inicio" class="animate__animated animate__fadeInUp mt-8">
+	<SectionContainer id="Inicio" class=" mt-8 animate-fade-up animate-ease-in-out">
 		<Presentacion/>
 	</SectionContainer>
 
-	<SectionContainer id="Experiencia" class=" mt-16 p-4">
-		<h2 class=" text-3xl font-semibold mb-6 flex gap-x-3 items-center"><img src="briefcase.svg" alt=""> Experiencia</h2>
+	<SectionContainer id="Experiencia" class=" mt-16 animate-fade-up animate-ease-in-out animate-delay-[400ms]">
+		<Titulo title="Experiencia" svg="briefcase.svg"></Titulo>
 
 		<article>
 			<Timeline>
@@ -32,34 +33,33 @@ description='¿Quieres crear un sitio web interactivo, creativo y escalable? Est
 		</article>
 	</SectionContainer>
 
-	<SectionContainer id="Proyectos" class=" mt-10 p-4">
-		<h2 class=" text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-			<img src="code.svg" alt="">Proyectos
-		</h2>
+	<SectionContainer id="Proyectos" class=" mt-10">
+		<Titulo title="Proyectos" svg="code.svg"></Titulo>
 
-		<article class=" flex flex-col sm:flex-row justify-between gap-6">
+
+		<article class=" flex flex-col gap-6">
 			<Projects
 				title='Songlit - Biblioteca de Artistas, Albúmes y Canciones'
-				description='Biblioteca de artistas, albúmes y canciones. Creada desde cero con HTML, CSS y Javascript vanilla.'
+				description='Biblioteca de artistas, albúmes y canciones. Creada desde cero con Astro, Tailwind y React y usando Strapi como CMS.'
 				image='images/Songlit.webp'
 				link='https://juanshiu.github.io/Proyecto-final/index.html'
-				tagsToShow={['HTML', 'CSS', 'JAVASCRIPT']}
+				github='https://github.com/Maro2433/X_Twitter'
+				tagsToShow={['ASTRO', 'TAILWIND', 'REACT', 'STRAPI']}
 			/>
 			<Projects
 				title='Clon Twitter'
 				description='Replica de la página oficial de Twitter. Creada desde cero con HTML, CSS y Javascript vanilla.'
 				image='images/Twitter.webp'
 				link='https://x-usco.000webhostapp.com/'
+				github='https://github.com/Juanshiu/Songlit2'
 				tagsToShow={['HTML', 'CSS', 'JAVASCRIPT']}
 			/>
 		</article>
 	</SectionContainer>
 
-</Layout>
+	<SectionContainer id="Skills" class=" mt-8">
+		<Titulo title="Skills" svg="terminal.svg"></Titulo>
+		<Textscroll/>
+	</SectionContainer>
 
-<style>
-	:root {
-	--animate-duration: 1300ms;
-	--animate-delay: 0.5s;
-	}
-</style>
+</Layout>
