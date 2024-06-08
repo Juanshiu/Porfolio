@@ -1,30 +1,34 @@
 ---
 import ButtonStyle from "../ButtonStyle.astro";
+import Github from "../logos/github.astro";
+import Linkedin from "../logos/linkedin.astro";
+import Mail from "../logos/mail.astro";
+import CV from "../logos/cv.astro";
 ---
 
-<article class=" w-full">
+<article class=" w-full h-auto">
 
     <img src="images/Head.webp" class=" size-20 rounded-full" alt="">
 
     <h1 class="animate-charcter font-bold text-6xl mt-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-rose-500">¡Hola! Soy Juan Diego, Desarrollador Frontend.</h1>
     
-    <div class=" dark:text-white my-12 font-medium">
+    <div class=" dark:text-white my-10 font-medium">
         <p class=" mb-4 text-2xl sm:text-pretty ">Con un año de experiencia, <span class=" text-yellow-200"> Desarrollador Frontend y Diseñador UI/UX.</span> <span class=" text-red-200"> De Neiva, Colombia. </span> Me apasiona crear experiencias digitales <span class=" text-sky-200"> intuitivas y atractivas </span> visualmente utilizando las <span class=" text-pink-200"> últimas tecnologías </span> para el desarrollo web.</p>
     </div>
 
-    <div class=" flex flex-wrap items-center mt-6 gap-4">
+    <div class=" flex flex-wrap items-center gap-4">
         
         <ButtonStyle href="mailto://menethil0503@gmail.com">
-        <img src="mail.svg" alt=""> menethil0503@gmail.com</ButtonStyle>
+        <Mail/> menethil0503@gmail.com</ButtonStyle>
 
         <ButtonStyle href="https://github.com/Juanshiu" target="_blank" rel="noreferrer"> 
-        <img src="github.svg" alt=""> Github</ButtonStyle>
+        <Github/> Github</ButtonStyle>
 
         <ButtonStyle href="https://www.linkedin.com/in/montenegro-dev/" target="_blank" rel="noreferrer"> 
-        <img src="linkedin.svg" alt=""> Linkedin</ButtonStyle>
+        <Linkedin/> Linkedin</ButtonStyle>
 
         <ButtonStyle href="https://docs.google.com/document/d/1H18U70-WyYtOVQK1YC2K9jzgjL2LN17Kp-cn8IS76z0/edit?usp=sharing" target="_blank" rel="noreferrer"> 
-        <img src="doc.svg" alt=""> CV</ButtonStyle>
+        <CV/> CV</ButtonStyle>
     </div>
 </article>
 
