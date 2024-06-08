@@ -8,6 +8,9 @@ import Experience from "../components/Layout/Experience.astro";
 import Timeline from "../components/Timeline.astro";
 import TextScroll from "../components/Textslider.astro";
 import Titulo from "../components/Titulo.astro";
+import Terminal from "../components/logos/terminal.astro";
+import Briefcase from "../components/logos/briefcase.astro";
+import Code from "../components/logos/code.astro";
 ---
 
 <Layout 
@@ -20,53 +23,52 @@ description='¿Quieres crear un sitio web interactivo, creativo y escalable? Est
 	</SectionContainer>
 
 	<SectionContainer id="Experiencia" class=" mt-16 animate-fade-up animate-ease-in-out animate-delay-[400ms]">
-		<Titulo title="Experiencia" svg="briefcase.svg"></Titulo>
+		<Titulo title="Experiencia" class="bg-clip-text bg-gradient-to-r from-cyan-500 via-white to-white"><Briefcase/></Titulo>
 
 		<article>
 			<Timeline>
 				<Experience
-				title='Desarrollador Web - Freelance'
-				date='2023 - Actualidad'
-				description='Desarrollo de sitios web con Astro, Tailwind CSS y Javascript.'
+					title='Desarrollador Web - Freelance'
+					date='2023 - Actualidad'
+					description='Desarrollo de sitios web con Astro, Tailwind CSS y Javascript.'
 				/>
 			</Timeline>
 		</article>
 	</SectionContainer>
 
-	<SectionContainer id="Proyectos" class=" mt-10">
-		<Titulo title="Proyectos" svg="code.svg"></Titulo>
-
+	<SectionContainer id="Proyectos" class=" mt-10 animate-fade-up animate-ease-in-out animate-delay-[600ms]">
+		<Titulo title="Proyectos" class="bg-clip-text bg-gradient-to-r from-pink-500 via-white to-white"><Code/></Titulo>
 
 		<article class=" flex flex-col gap-6">
 			<Projects
 				title='Songlit - Biblioteca de Artistas, Albúmes y Canciones'
 				description='Biblioteca de artistas, albúmes y canciones. Creada desde cero con Astro, Tailwind y React y usando Strapi como CMS.'
 				image='images/Songlit.webp'
-				link='https://juanshiu.github.io/Proyecto-final/index.html'
-				github='https://github.com/Maro2433/X_Twitter'
+				link='https://songlit.vercel.app/'
+				github='https://github.com/Juanshiu/Songlit'
 				tagsToShow={['ASTRO', 'TAILWIND', 'REACT', 'STRAPI']}
 			/>
-			<Projects
+			<!-- <Projects
 				title='Clon Twitter'
 				description='Replica de la página oficial de Twitter. Creada desde cero con HTML, CSS y Javascript vanilla.'
 				image='images/Twitter.webp'
 				link='https://x-usco.000webhostapp.com/'
 				github='https://github.com/Juanshiu/Songlit2'
 				tagsToShow={['HTML', 'CSS', 'JAVASCRIPT']}
-			/>
+			/> -->
 			<Projects
 				title='NexGenTec'
 				description='Página Ecommerce básica usando Astro y Supabase como base de datos.'
 				image='images/nexgentec.webp'
 				link='https://nex-gen-tec.vercel.app/'
 				github='https://github.com/Juanshiu/NexGenTec'
-				tagsToShow={['ASTRO', 'TAILWIND', 'REACT', 'SUPABASE']}
+				tagsToShow={['ASTRO', 'TAILWIND', 'SVELTE', 'SUPABASE']}
 			/>
 		</article>
 	</SectionContainer>
 
-	<SectionContainer id="Skills" class=" mt-8">
-		<Titulo title="Skills " svg="terminal.svg"></Titulo>
+	<SectionContainer id="Skills" class=" mt-8 animate-fade-up animate-ease-in-out animate-delay-[800ms]">
+		<Titulo title="Skills " class="bg-clip-text bg-gradient-to-r from-yellow-500 via-white to-white"><Terminal/></Titulo>
 		<TextScroll/>
 	</SectionContainer>
 
