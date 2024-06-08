@@ -3,7 +3,7 @@ interface Props {
     title: string;
     description: string;
     image: string;
-    link: string;
+    link?: string;
     github: string;
     tagsToShow: string[];
 }
@@ -51,13 +51,18 @@ const Tags = {
         class: "bg-green-500/50 border border-green-600",
         icon: "supabase.svg",
     },
+    SVELTE : {
+        name: "SVELTE",
+        class: "bg-orange-500/50 border border-red-600",
+        icon: "svelte.svg",
+    }
 };
 ---
 
 <div class="w-full h-auto flex flex-col sm:flex-row p-4 rounded-xl gap-6">
     <div class="relative sm:w-1/2">
         <img src={image} alt={title} class=" absolute w-full h-60 blur-md scale-105 -z-10 transition-all">
-        <img src={image} alt={title} class=" w-full h-60 rounded shadow-2xl shadow-white/10 hover:scale-105 hover:shadow-neutral-900  transition-all">
+        <a href={link} target="_blank"><img src={image} alt={title} class=" w-full h-60 rounded shadow-2xl shadow-white/10 hover:scale-105 hover:shadow-neutral-900  transition-all"></a>
     </div>
         
     <div class=" flex flex-col gap-2 sm:w-1/2">  
