@@ -1,22 +1,25 @@
 ---
 import '../../styles/header.css';
 ---
-<header class=" px-4 max-w-4xl container mx-auto mt-8 text-white animate-fade-down animate-once animate-delay-100 animate-ease-in-out">
+<header class=" px-4 max-w-5xl container mx-auto mt-3 text-white/80 animate-fade-down animate-once animate-delay-100 animate-ease-in-out">
     
     <div class=" flex justify-between items-center">
-        <div class=" flex items-center gap-2">
-            <img src="starry-night.svg" class=" size-7" alt="">
-            <h1 class="font-semibold text-base lg:text-xl text-white "><span class="text-[#E899DC]">&lt;</span>Juan Diego <span class="text-[#E899DC]">/&gt;</span></h1>
-            
-        </div>
-
-        <nav class=" rounded-b-lg list-none items-center sm:flex hidden">
-            <a href="#Inicio" class=" font-semibold text-xl p-2 rounded-md px-4">Inicio</a>
-            <a href="#Experiencia" class=" font-semibold text-xl p-2 px-4">Experiencia</a>
-            <a href="#Proyectos" class=" font-semibold text-xl p-2 px-4">Proyectos</a>
-            <a href="#Skills" class=" font-semibold text-xl p-2 px-4">Skills</a>
+        <nav class=" rounded-b-lg list-none items-center sm:flex hidden text-base font-medium py-2 px-4 gap-8">
+            <a href="#Inicio">Inicio</a>
+            <a href="#Experiencia" >Experiencia</a>
+            <a href="#Proyectos" >Proyectos</a>
+            <a href="#Sobremi" >Sobre mi</a>
             <span></span>
         </nav>
+
+        <!-- <div class=" flex items-center gap-2">
+            <button><img src="translate.svg" alt="" class=" size-6 fill-white"></button>
+            Menu de idiomas
+            <div class="flex items-center gap-2">
+                <img src="es.svg" class="w-6" alt="Español">
+                <img src="en.svg" class="w-6" alt="Inglés">
+            </div>
+        </div> -->
 
         <!-- Navbar Menú Hamburguer -->
         <label class="hamburger sm:hidden cursor-pointer p-1 rounded-lg bg-white/5" for="menuToggle">
@@ -28,7 +31,7 @@ import '../../styles/header.css';
         </label>
     </div>
     <div id="menu" class=" my-2 " >
-        <ul class="list-none flex flex-col items-center bg-white/5 rounded-md ">
+        <ul class="list-none flex flex-col items-center bg-white/5 rounded-md animate-fade-down animate-duration-200">
             <li class=" font-medium text-xl py-2"><a href="#Inicio">Inicio</a></li>
             <li class=" font-medium text-xl py-2"><a href="#Proyectos">Proyectos</a></li>
             <li class=" font-medium text-xl py-2"><a href="#Experiencia">Experiencia</a></li>
