@@ -11,32 +11,37 @@ import Titulo from "../components/Titulo.astro";
 import Terminal from "../components/logos/terminal.astro";
 import Briefcase from "../components/logos/briefcase.astro";
 import Code from "../components/logos/code.astro";
+import User from "../components/logos/user.astro";
+import { WobbleCardDemo } from "../components/react/WoobleCard";
+import Bentogrid from '@/components/Layout/Bentogrid.astro';
 ---
 
 <Layout 
-title="Portafolio de Juan Diego" 
-description='¿Quieres crear un sitio web interactivo, creativo y escalable? Estás en el lugar correcto.'
+	title="Portafolio de Juan Diego" 
+	description='¿Quieres crear un sitio web interactivo, creativo y escalable? Estás en el lugar correcto.'
 >
 
-	<SectionContainer id="Inicio" class=" mt-8 animate-fade-up animate-ease-in-out">
+	<SectionContainer id="Inicio" class=" max-w-4xl mt-8 animate-fade-up animate-ease-in-out">
 		<Presentacion/>
 	</SectionContainer>
 
-	<SectionContainer id="Experiencia" class=" mt-16 animate-fade-up animate-ease-in-out animate-delay-[400ms]">
+	<SectionContainer id="Experiencia" class=" max-w-4xl mt-16 animate-fade-up animate-ease-in-out animate-delay-[350ms]">
 		<Titulo title="Experiencia" class="bg-clip-text bg-gradient-to-r from-cyan-500 via-white to-white"><Briefcase/></Titulo>
 
 		<article>
 			<Timeline>
 				<Experience
-					title='Desarrollador Web - Freelance'
-					date='2023 - Actualidad'
-					description='Desarrollo de sitios web con Astro, Tailwind CSS y Javascript.'
-				/>
+					title='Desarrollador front-end - No Country'
+					date='Jun 2024 - Ago 2024'
+				> 
+					<p class="mb-4 text-lg sm:text-xl font-normal text-white">Simulación laboral: <span class=" text-red-200">Desarrollo web colaborativo</span> para una página web turística de Guatapé, Colombia. <span class=" font-semibold">Fortalecimiento de habilidades en trabajo en equipo, comunicación y desarrollo web front-end.</span></p>
+					<p class="mb-4 text-lg sm:text-xl font-normal text-white">Con la ayuda de No Country, participé en el desarrollo web colaborativo de la página turística "Rincones de Guatapé". Esta experiencia <span class=" text-red-200">fortaleció mis habilidades</span> de trabajo en equipo, compromiso y colaboración, a la vez que me permitió adquirir <span class=" text-red-200">conocimientos técnicos en React y Next.js.</span></p>
+				</Experience>
 			</Timeline>
 		</article>
 	</SectionContainer>
 
-	<SectionContainer id="Proyectos" class=" mt-10 animate-fade-up animate-ease-in-out animate-delay-[600ms]">
+	<SectionContainer id="Proyectos" class=" max-w-4xl animate-fade-up animate-ease-in-out animate-delay-[600ms]">
 		<Titulo title="Proyectos" class="bg-clip-text bg-gradient-to-r from-pink-500 via-white to-white"><Code/></Titulo>
 
 		<article class=" flex flex-col gap-6">
@@ -64,12 +69,25 @@ description='¿Quieres crear un sitio web interactivo, creativo y escalable? Est
 				github='https://github.com/Juanshiu/NexGenTec'
 				tagsToShow={['ASTRO', 'TAILWIND', 'SVELTE', 'SUPABASE']}
 			/>
+			<Projects
+				title='Rincones de Guatapé'
+				description='Replica de la página principal de Google. Creada desde cero con HTML y CSS.'
+				image='images/guatape.webp'
+				link=''
+				github='https://github.com/No-Country-simulation/c19-19-m-java-react'
+				tagsToShow={['REACT', 'NEXT', 'TAILWIND']}
+			/>
 		</article>
 	</SectionContainer>
 
-	<SectionContainer id="Skills" class=" mt-8 animate-fade-up animate-ease-in-out animate-delay-[800ms]">
+	<!-- <SectionContainer id="Skills" class=" max-w-4xl mt-10 animate-fade-up animate-ease-in-out animate-delay-[800ms]">
 		<Titulo title="Skills " class="bg-clip-text bg-gradient-to-r from-yellow-500 via-white to-white"><Terminal/></Titulo>
 		<TextScroll/>
-	</SectionContainer>
+	</SectionContainer> -->
+
+	<SectionContainer id="Contacto" class=" max-w-6xl mt-10 animate-fade-up animate-ease-in-out animate-delay-[1000ms]">
+		<Titulo title="Sobre mi" class="bg-clip-text bg-gradient-to-r from-green-500 via-white to-white"><User/></Titulo>
+		<WobbleCardDemo client:only/>
+	<SectionContainer
 
 </Layout>
