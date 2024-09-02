@@ -7,7 +7,7 @@ function Timeset() {
 
     useEffect(() => {
         const fetchTime = async () => {
-            const timeUrl = 'http://worldtimeapi.org/api/timezone/America/Bogota';
+            const timeUrl = 'https://worldtimeapi.org/api/timezone/America/Bogota';
             try {
                 const timeResponse = await fetch(timeUrl);
                 const timeData = await timeResponse.json();
@@ -47,8 +47,8 @@ function Timeset() {
             {time && 
                 <p className=' text-3xl mt-4 font-bold'>{new Date(time.datetime).toLocaleTimeString()} 
                     <p className=' text-lg font-normal'>
-                        {/* Aplicamos las opciones de formato */}
-                        {Mayus(new Date(time.datetime).toLocaleDateString('es-ES', options))}</p>
+                        {Mayus(new Date(time.datetime).toLocaleDateString('es-ES', options))}
+                    </p>
                 </p>
             }
         </>
