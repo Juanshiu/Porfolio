@@ -6,14 +6,11 @@ import SectionContainer from "../components/SectionContainer.astro"
 import Projects from "../components/Layout/Projects.astro"
 import Experience from "../components/Layout/Experience.astro";
 import Timeline from "../components/Timeline.astro";
-import TextScroll from "../components/Textslider.astro";
 import Titulo from "../components/Titulo.astro";
-import Terminal from "../components/logos/terminal.astro";
 import Briefcase from "../components/logos/briefcase.astro";
 import Code from "../components/logos/code.astro";
 import User from "../components/logos/user.astro";
 import { WobbleCardDemo } from "../components/react/WoobleCard";
-import Bentogrid from '@/components/Layout/Bentogrid.astro';
 ---
 
 <Layout 
@@ -71,7 +68,7 @@ import Bentogrid from '@/components/Layout/Bentogrid.astro';
 			/>
 			<Projects
 				title='Rincones de Guatapé'
-				description='Replica de la página principal de Google. Creada desde cero con HTML y CSS.'
+				description=' Página web turística de Guatapé, Colombia. Desarrollada en React y Next.js junto con un equipo de trabajo.'
 				image='images/guatape.webp'
 				link=''
 				github='https://github.com/No-Country-simulation/c19-19-m-java-react'
@@ -87,7 +84,7 @@ import Bentogrid from '@/components/Layout/Bentogrid.astro';
 
 	<SectionContainer id="Contacto" class=" max-w-6xl mt-10 animate-fade-up animate-ease-in-out animate-delay-[1000ms]">
 		<Titulo title="Sobre mi" class="bg-clip-text bg-gradient-to-r from-green-500 via-white to-white"><User/></Titulo>
-		<WobbleCardDemo client:only/>
+		<WobbleCardDemo client:load/>
 	<SectionContainer
 
 </Layout>
